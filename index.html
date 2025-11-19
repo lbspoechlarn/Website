@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Flowbite & TailwindCSS for Styling-->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-black">
+
+    <!--Heroooo-->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+</style>
+<section class="relative flex flex-col items-center max-md:px-2 bg-black text-white text-sm pb-96 pt-8 bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)] bg-top bg-no-repeat">
+   <nav class="flex items-center border mx-4 w-full max-w-4xl justify-between border-slate-700 px-4 py-2.5 my-4 rounded-full text-white">
+    <a href="#">
+         <img src="./logo_lbs.png" width="157" height="40" alt="">
+    </a>
+    
+    <div id="menu" class="max-md:absolute max-md:bg-black/50 max-md:backdrop-blur max-md:top-0 transition-all duration-300 max-md:h-full max-md:w-full max-md:z-10 max-md:-left-full max-md:justify-center flex-col md:flex-row flex items-center gap-2">
+        <a onclick="closeNavbar()" class="px-4 py-2"href="index.html">Home</a>
+        <a onclick="closeNavbar()" class="px-4 py-2 border border-white/10 bg-white/10 font-medium rounded-full" href="./slot.html">Casino</a>
+        <a onclick="closeNavbar()" class="px-4 py-2" href="index.html#guides">Guides</a>
+        <a onclick="closeNavbar()" class="px-4 py-2" href="https://www.reddit.com/r/LBSPoechlarn/">Beratung</a>
+        <a onclick="closeNavbar()" class="px-4 py-2" href="history.html">History</a>
+        
+        <a onclick="closeNavbar()" class="md:hidden px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-full font-medium" href="./maps.html">Karte</a>
+        
+        <button onclick="closeNavbar()" class="md:hidden bg-gray-800 hover:bg-black text-white p-2 rounded-md aspect-square font-medium transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+            </svg>
+        </button>
+    </div>
+    
+    <button onclick="openNavbar()" class="md:hidden">
+        <svg class="size-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+    </button>
+    
+    <button onclick="window.location.href='./maps.html'" class="hidden md:block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition">
+        Karte
+    </button>
+</nav>
+
+
+    <div class="flex flex-wrap items-center justify-center p-1.5 mt-24 rounded-full border border-green-900 bg-green-700/15 text-xs">
+        <div class="flex items-center">
+        </div>
+        <p class="">Neu! Version 0.1 </p>
+    </div>
+
+    <h1 class="text-4xl md:text-6xl text-center font-semibold max-w-4xl mt-5 bg-gradient-to-r from-white to-[#748298] text-transparent bg-clip-text">
+        LBS - Pöchlarn. Dein Lebensretter!
+    </h1>
+    <p class="text-slate-300 md:text-base max-md:px-2 text-center max-w-2xl mt-3">
+        Eine maßgeschneiderte Website für Schüler:innen mit Tipps und Strategien zum Überleben der Wochen.
+    </p>
+
+    <div class="flex items-center gap-2 mt-8 text-sm">
+        <button class="px-6 py-2.5 bg-green-600 hover:bg-green-700 transition rounded-full" onclick="window.location.href='vorschau.html'">
+            Starten
+        </button>
+        <button class="flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-6 py-2.5">
+            <span>Wir verändern dein Leben.</span>
+            <svg class="mt-0.5" width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.25.5 4.75 4l-3.5 3.5" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+
+   
+</section>
+
+<section id="info" class="relative flex flex-col items-center justify-center text-center">
+  <div class="px-4 mx-auto max-w-screen-xl lg:px-64">
+    <div class="max-w-screen-lg mx-auto text-gray-500 sm:text-lg dark:text-gray-400">
+      <h2 class="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
+        Das Leben kann schwer sein, wir ändern das.
+      </h2>
+      <p class="mb-4 font-light">
+        Wir haben uns als Ziel gesetzt, euer leben zu vereinfachen. Dabei liefert euch die Website Informationen rund um Pöchlarn. 
+        Sie wurde optimiert durch Erfahrung mehreren Wochen und durch mehreren Personen.
+      <p class="mb-4 font-medium">
+        Sogar bei Finanzielen helfen wir weiter - denn unser Casino liefert die Grundlage einer <s>nicht</s> guten Angewohnheit, als Gewinn erhaltet ihr hilfreiche Tipps/Tricks.
+      </p>
+      <a href="#" class="inline-flex items-center justify-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
+        Jetzt ins Casino
+        <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section id="guides" class="py-32 bg-black bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)] bg-top bg-no-repeat">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+      <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+          <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Guides</h2>
+          <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Hier beginnt es, die Sammlung an Informationen. Wir geben Ihnen mit unseren Guides eine ordentliche Einfühurng in verschiedenen Dingen.</p>
+      </div> 
+      <div class="place-items-center">
+          <article class="p-6 rounded-lg shadow-md ">
+              <div class="flex justify-between items-center mb-5 text-gray-500">
+                  <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                     <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"></path><path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path></svg>
+                      Artikel
+                  </span>
+                  <span class="text-sm">20.11.2025</span>
+              </div>
+              <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><a href="#">Wie überlebe ich die Wochen?</a></h2>
+              <p class="mb-5 font-light text-gray-500 dark:text-gray-400">Eine Anleitung zum überleben, die ihre Sicht auf verschiedene dinge ändern wird. Erstens <s>viel</s> Saufen. </p>
+              <div class="flex justify-between items-center">
+                  <div class="flex items-center space-x-4">
+                  </div>
+                  <a href="working.html" class="inline-flex items-center font-medium text-white hover:underline">
+                      Lesen
+                      <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                  </a>
+              </div>
+          </article> 
+      </div>  
+  </div>
+</section>
+
+
+<!--Footer-->
+
+<footer class="flex flex-col items-center justify-around w-full py-16 text-sm text-white ">
+    <img src="./logo_lbs.png" width="157" height="40" alt="">
+    <p class="mt-4 text-center">Copyright © 2025 <a href="">?XCE</a>. All rights reservered.</p>
+    <a href="impressum.html">impressum</a>
+</footer>
+
+    <!--Flowbite JS for Function--->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script>
+         const menu = document.getElementById('menu');
+
+            function closeNavbar() {
+                menu.classList.remove('max-md:left-0');
+                menu.classList.add('max-md:-left-full');
+            }
+
+            function openNavbar() {
+                menu.classList.remove('max-md:-left-full');
+                menu.classList.add('max-md:left-0');
+            }
+
+            document.querySelectorAll('#menu a').forEach(link => {
+                link.addEventListener('click', function () {
+                    document.querySelectorAll('#menu a').forEach(el => el.classList.remove('border', 'border-white/10', 'bg-white/10', 'font-medium', 'rounded-full'));
+                    this.classList.add('border', 'border-white/10', 'bg-white/10', 'font-medium', 'rounded-full');
+                });
+            });
+    </script>
+</body>
+</html>
