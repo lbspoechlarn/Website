@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Flowbite & TailwindCSS for Styling-->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-black bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)] bg-top bg-no-repeat">
+
+
+    <section class="relative flex flex-col items-center max-md:px-2 text-white text-sm pb-28 pt-8">
+    <!--Navbar-->
+     <nav class="flex items-center border mx-4 w-full max-w-4xl justify-between border-slate-700 px-4 py-2.5 rounded-full text-white">
+        <a href="https://prebuiltui.com">
+             <img src="./logo_lbs.png" width="157" height="40" alt="">
+        </a>
+        <div id="menu" class="max-md:absolute max-md:bg-black/50 max-md:backdrop-blur max-md:top-0 transition-all duration-300 max-md:h-full max-md:w-full max-md:z-10 max-md:-left-full max-md:justify-center flex-col md:flex-row flex items-center gap-2">
+            <a onclick="closeNavbar()" class="px-4 py-2 border border-white/10 bg-white/10 font-medium rounded-full"href="#">Home</a>
+            <a onclick="closeNavbar()" class="px-4 py-2" href="./slot.html">Casino</a>
+            <a onclick="closeNavbar()" class="px-4 py-2" href="index.html#guides">Guides</a>
+            <a onclick="closeNavbar()" class="px-4 py-2" href="https://www.reddit.com/r/LBSPoechlarn/">Beratung</a>
+            <a onclick="closeNavbar()" class="px-4 py-2" href="history.html">History</a>
+            <button onclick="closeNavbar()" class="md:hidden bg-gray-800 hover:bg-black text-white p-2 rounded-md aspect-square font-medium transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+            </button>
+        </div>
+        <button onclick="openNavbar()" class="md:hidden">
+            <svg class="size-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        <button onclick="window.location.href='./maps.html'" class="hidden md:block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition">
+            Karte
+        </button>
+    </nav>
+
+ 
+    <section class="py-32">
+    <div class="py-8 px-4 mx-auto max-w-screen-md text-center lg:py-16 lg:px-12">
+        <svg class="mx-auto mb-4 w-10 h-10 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M331.8 224.1c28.29 0 54.88 10.99 74.86 30.97l19.59 19.59c40.01-17.74 71.25-53.3 81.62-96.65c5.725-23.92 5.34-47.08 .2148-68.4c-2.613-10.88-16.43-14.51-24.34-6.604l-68.9 68.9h-75.6V97.2l68.9-68.9c7.912-7.912 4.275-21.73-6.604-24.34c-21.32-5.125-44.48-5.51-68.4 .2148c-55.3 13.23-98.39 60.22-107.2 116.4C224.5 128.9 224.2 137 224.3 145l82.78 82.86C315.2 225.1 323.5 224.1 331.8 224.1zM384 278.6c-23.16-23.16-57.57-27.57-85.39-13.9L191.1 158L191.1 95.99l-127.1-95.99L0 63.1l96 127.1l62.04 .0077l106.7 106.6c-13.67 27.82-9.251 62.23 13.91 85.39l117 117.1c14.62 14.5 38.21 14.5 52.71-.0016l52.75-52.75c14.5-14.5 14.5-38.08-.0016-52.71L384 278.6zM227.9 307L168.7 247.9l-148.9 148.9c-26.37 26.37-26.37 69.08 0 95.45C32.96 505.4 50.21 512 67.5 512s34.54-6.592 47.72-19.78l119.1-119.1C225.5 352.3 222.6 329.4 227.9 307zM64 472c-13.25 0-24-10.75-24-24c0-13.26 10.75-24 24-24S88 434.7 88 448C88 461.3 77.25 472 64 472z"/></svg>
+        <h1 class="mb-4 text-4xl font-bold tracking-tight leading-none text-gray-900 lg:mb-6 md:text-5xl xl:text-6xl dark:text-white">In Arbeit...</h1>
+        <p class="font-light text-gray-500 md:text-lg xl:text-xl dark:text-gray-400">Schreibe gerade noch den Guide. In den nächsten Tagen ist er fertig.</p>
+    </div>
+    </section>
+
+
+
+<!--Footer-->
+<footer class="flex flex-col items-center justify-around w-full py-16 text-sm text-white relative">
+    <img src="./logo_lbs.png" width="157" height="40" alt="">
+    <p class="mt-4 text-center">
+        Copyright © 2025 <a href="#">?XCE</a>. All rights reservered.
+    </p>
+    <a href="impressum.html">impressum</a>
+</footer>
+
+
+    <!--Flowbite JS for Function--->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script>
+          const menu = document.getElementById('menu');
+
+            function closeNavbar() {
+                menu.classList.remove('max-md:left-0');
+                menu.classList.add('max-md:-left-full');
+            }
+
+            function openNavbar() {
+                menu.classList.remove('max-md:-left-full');
+                menu.classList.add('max-md:left-0');
+            }
+
+            document.querySelectorAll('#menu a').forEach(link => {
+                link.addEventListener('click', function () {
+                    document.querySelectorAll('#menu a').forEach(el => el.classList.remove('border', 'border-white/10', 'bg-white/10', 'font-medium', 'rounded-full'));
+                    this.classList.add('border', 'border-white/10', 'bg-white/10', 'font-medium', 'rounded-full');
+                });
+            });
+    </script>
+</body>
+</html>
