@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>LBS - Casino</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="../style.css"> 
+<style>
+/* Füge hier ggf. notwendige Custom CSS oder Overrides hinzu */
+/* Beispiel für den Reload Button */
+.reload-btn {
+    background-color: #f59e0b; /* Tailwind amber-500 */
+    transition: background-color 0.3s;
+}
+.reload-btn:hover {
+    background-color: #d97706; /* Tailwind amber-600 */
+}
+</style>
+</head>
+<body>
+
+<nav class="container mx-auto flex items-center border w-full max-w-4xl justify-between border-slate-700 px-4 py-2.5 my-4 rounded-full text-white">
+    <a href="../index.html">
+         <img src="../assets/logo_lbs.png" width="157" height="40" alt="Logo LBS">
+    </a>
+    
+    <div id="menu" class="max-md:absolute max-md:bg-black/50 max-md:backdrop-blur max-md:top-0 transition-all duration-300 max-md:h-full max-md:w-full max-md:z-50 max-md:-left-full max-md:justify-center max-md:items-center max-md:pt-20 max-md:px-20 flex-col md:flex-row flex items-center gap-2">
+        
+        <a onclick="closeNavbar()" class="px-4 py-2 max-md:w-full max-md:text-center"href="../index.html">Home</a>
+        <a onclick="closeNavbar()" class="px-4 py-2 max-md:w-full max-md:text-center border border-white/10 bg-white/10 font-medium rounded-full" href="slot.html">Casino</a>
+        <a onclick="closeNavbar()" class="px-4 py-2 max-md:w-full max-md:text-center" href="../index.html#guides">Guides</a>
+        <a onclick="closeNavbar()" class="px-4 py-2 max-md:w-full max-md:text-center" href="https://www.reddit.com/r/LBSPoechlarn/">Beratung</a>
+        <a onclick="closeNavbar()" class="px-4 py-2 max-md:w-full max-md:text-center" href="history.html">History</a>
+        
+        <a onclick="closeNavbar()" class="md:hidden px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-full font-medium max-md:w-full max-md:text-center" href="maps.html">Karte</a>
+        
+        <button onclick="closeNavbar()" class="md:hidden bg-gray-800 hover:bg-black text-white p-2 rounded-md aspect-square font-medium transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+            </svg>
+        </button>
+    </div>
+    
+    <button onclick="openNavbar()" class="md:hidden">
+        <svg class="size-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+    </button>
+    
+    <button onclick="window.location.href='./maps.html'" class="hidden md:block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition">
+        Karte
+    </button>
+</nav>
+
+<section id="sloti" class="relative flex flex-col items-center max-md:px-2 text-white text-sm pb-28 ">
+
+<div id="overlay" class="overlay" aria-hidden="true">
+  <div class="panel" role="dialog" aria-modal="true">
+    <h2>Gewonnen!</h2>
+    <p id="tipText" class="tip"></p>
+    <button id="closeBtn" class="close">Weiter</button>
+  </div>
+</div>
+
+<div class="app-wrapper">
+  <div id="app" class="app" role="application">
+    <header>
+      <h1>Casino</h1>
+      <div class="status">
+        <div id="message">Viel Glück!</div>
+        <div style="font-size:12px;color:var(--muted)">Gewinne zeigen einen Tipp</div>
+      </div>
+    </header>
+    <main>
+      <div class="slot-stage">
+        <div class="reel"><div class="strip" id="strip-0"></div></div>
+        <div class="reel"><div class="strip" id="strip-1"></div></div>
+        <div class="reel"><div class="strip" id="strip-2"></div></div>
+      </div>
+      <div class="controls">
+        <div class="info">
+          <div>Credits: <strong id="credits">50</strong></div>
+          <div>|</div>
+          <div>Bet: <strong id="bet">5</strong></div>
+        </div>
+        
+        <button id="spinBtn" class="btn">Spin</button>
+        
+        <button id="reloadBtn" class="btn reload-btn" style="display:none;">Credits aufladen</button>
+        
+        <div style="display:flex;gap:8px;align-items:center">
+          <button id="betDown" class="small">-</button>
+          <button id="betUp" class="small">+</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+</section>
+
+<footer>
+  <img src="../assets/logo_lbs.png" width="157" height="40" alt="Logo LBS">
+  <p class="mt-4 text-center">Copyright © 2025 <a href="#">?XCE</a>. All rights reservered.</p>
+   <a href="impressum.html">impressum</a>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/casino.js"></script>
+
+</body>
+</html>
