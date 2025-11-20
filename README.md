@@ -1,6 +1,6 @@
 # 🌐 LBS-Pöchlarn – Website  
 
-![Cover](./logo_lbs.png)
+![Cover](./assets/logo_lbs.png)
 <!-- Falls dein Cover anders heißt, einfach den Dateinamen anpassen -->
 
 ---
